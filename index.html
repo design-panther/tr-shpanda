@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Leaflet + ESRI Reverse Geocoder</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+<div id="map-container">
+  <div id="map" class="map"></div>
+</div>
+<div id = "showBar" class="center"   style="display:none">
+  <button id="myT"  class="center"  onmousedown="showBar()">SHOW</button>
+  </div>
+
+<div id = "controlBar" class="center" >
+<div id="instructions">
+  <button id="myT" class="center" onmousedown="hideBar()">HIDE</button>
+
+
+
+  <label for="title">Address:</label>
+  <p>
+  <textarea style="background-color: rgba(69, 68, 68, 0.466); width: 287px;"  id="title" name="title"></textarea>
+  
+<p>
+  <label for="lat">Latitude:</label>
+  <input type="text"  style="background-color: rgba(69, 68, 68, 0.466);" id="lat"  name="lat">
+<span></span>
+  <label for="lon">Longitude:</label>
+  <input type="text"  style="background-color: rgba(69, 68, 68, 0.466);" id="lon" name="lon">
+  <span></span>
+
+  <label for="media">Add Media:</label>
+  <div id = "controlBar" >
+    <input type="file" style="background-color: rgba(69, 68, 68, 0.466); "   id="fileToLoad"><br>
+    <div id="inputTextToSave"  style="background-color: rgba(69, 68, 68, 0.466);" ></div>     
+    <div id="fileToLoad"></div>    
+
+  <label for="summary">Summary:</label>
+  <p>  
+  <textarea name="summary" id="summary" name="summary" style="background-color: rgba(69, 68, 68, 0.466); width: 287px;" placeholder="summarize the task here"></textarea>
+<br>
+
+  <button type="button" id="button" class="center"    onclick="submitForm()">ADD LOCATION</button>
+</form>
+
+<label for="media">Litter Locations:</label>
+</textarea>
+<textarea name="litterLocation" id="litterLocation" name="litterLocation" style="background-color: rgba(69, 68, 68, 0.466); width: 287px; height:6lh;"></textarea>
+<br>
+<button type="button" id="button" class="center" style="width: 170px;"   onclick="submitLocations()">SUBMIT LOCATIONS</button>
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

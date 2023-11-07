@@ -1,0 +1,126 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#instructions {
+  background-color: black;
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9000;
+  width: 300px;
+  /* padding: 20px; */
+  opacity: 80%;
+  color: yellow;
+  border: 2px yellow;
+  border-style: solid;
+  border-color: yellow;
+  border-radius: 8px;
+  padding: 5px;
+
+}
+
+#showBar {
+  background-color: black;
+  border: 2px solid yellow;
+  padding: 0.2em 0.4em;
+  /* border-radius: 0.2em; */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9000;
+  width: 300px;
+  padding: 20px;
+  opacity: 80%;
+  color:yellow;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 0.5em;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.leaflet-popup-content {
+  word-wrap: break-word;
+}
+
+.body {
+  width: 100%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-width: 10px yellow;
+}
+
+.myImage {
+  display: block;
+  width: 100%;
+}
+
+button {
+  background-color: black;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+#instructions, #controlbar, #summary, #lname, #fname, #title, #lat, #lon {
+  background-color: black;
+  border-width: 1px yellow;
+}
+
+#file-upload-button {
+  background: black;
+  color: yellow;
+  border: 10px yellow;
+}
+
+file-upload-button {
+  background: black;
+  color: yellow;
+  border: 10px yellow;
+}
+
+
+input[type="file"]::file-selector-button {
+  border: 2px solid yellow;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #070707;
+  transition: 1s;
+  color: yellow;
+
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #666b6b;
+  border: 2px solid #00cec9;
+}
+
+#litterLocation {
+  height: 6lh;
+}
+
+textarea {
+  border-radius: 8px;
+  padding: 5px;
+}
