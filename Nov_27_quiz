@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional for Bootstrap 4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            border-bottom: 1px solid #ccc;
+            /* Optional: Bottom border for definition */
+        }
+
+        #sticky {
+            position: sticky;
+            top: 0;
+            background-color: #f1f1f1;
+            /* Background color */
+            z-index: 1000;
+            /* z-index to ensure it stays on top of other content */
+            padding: 15px;
+            /* Optional: Padding for aesthetics */
+            border-bottom: 1px solid #ccc;
+            /* Optional: Bottom border for definition */
+            text-align: center;
+            /* background-image: "https://www.flickr.com/photos/38670906@N07/"; */
+            background-color: rgba(6, 80, 49, 0.968);
+            color: white;
+            opacity: 100%;
+        }
+
+        #evaluate {
+
+            position: sticky;
+            top: 0;
+            background-color: #f1f1f1;
+            /* Background color */
+            z-index: 1000;
+            /* z-index to ensure it stays on top of other content */
+            padding: 15px;
+            /* Optional: Padding for aesthetics */
+            border-top: 1px solid #ccc;
+            /* Optional: Bottom border for definition */
+            text-align: center;
+            background-color: rgba(6, 80, 49, 0.968);
+        }
+
+        #quizForm {
+            width: 100%;
+            /* takes up 100% of the width of its parent container */
+            height: 70vh;
+            /* takes up 100% of the viewport height */
+            left: 2%;
+            padding: 2%;
+            overflow: auto;
+            /* will display scrollbar only when necessary */
+            background-color: black;
+            color: white;
+
+        }
+
+        #score {
+            color: white;
+        }
+
+        /* p {
+    color: red;
+  } */
+    </style>
+</head>
+
+<body>
+    <div id="sticky">
+        <h1>In-Class Monday November 27</h1>
+        <span></span>
+        <!-- <h2>A REFRESHER</h2> -->
+    </div>
+
+
+    <form id="quizForm">
+<div class="question" id="question1">
+    <p>Which organization is primarily responsible for waste management in Baltimore?</p>
+<div id="q1-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q1" value="a"> Department of Public Works<br>
+B    <input type="radio" name="q1" value="b"> Blue Water Baltimore<br>
+C    <input type="radio" name="q1" value="c"> Civic Works<br>
+D    <input type="radio" name="q1" value="d"> Clean Corps<br>
+</div>
+<br>
+<div class="question" id="question2">
+    <p>What is the primary material found in litter around Baltimore?</p>
+<div id="q2-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q2" value="a"> Plastic<br>
+B    <input type="radio" name="q2" value="b"> Metal<br>
+C    <input type="radio" name="q2" value="c"> Glass<br>
+D    <input type="radio" name="q2" value="d"> Paper<br>
+</div>
+<br>
+<div class="question" id="question3">
+    <p>What are "Mr. Trash Wheel" and "Professor Trash Wheel"?</p>
+<div id="q3-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q3" value="a"> Waste Management Trucks<br>
+B    <input type="radio" name="q3" value="b"> Incinerators<br>
+C    <input type="radio" name="q3" value="c"> River Cleanup Machines<br>
+D    <input type="radio" name="q3" value="d"> Titles for sanitation workers<br>
+</div>
+<br>
+<div class="question" id="question4">
+    <p>Which of these methods is NOT used for litter reduction in Baltimore?</p>
+<div id="q4-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q4" value="a"> Street sweeping<br>
+B    <input type="radio" name="q4" value="b"> River cleanup machines<br>
+C    <input type="radio" name="q4" value="c"> Community trash cans<br>
+D    <input type="radio" name="q4" value="d"> Mandatory composting<br>
+</div>
+<br>
+<div class="question" id="question5">
+    <p>Which non-profit organization primarily focuses on water quality in Baltimore?</p>
+<div id="q5-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q5" value="a"> Blue Water Baltimore<br>
+B    <input type="radio" name="q5" value="b"> Civic Works<br>
+C    <input type="radio" name="q5" value="c"> Department of Public Works<br>
+D    <input type="radio" name="q5" value="d"> Clean Corps<br>
+</div>
+<br>
+<div class="question" id="question6">
+    <p>What year was the Baltimore Clean Harbor Plan initiated?</p>
+<div id="q6-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q6" value="a"> 2010<br>
+B    <input type="radio" name="q6" value="b"> 2014<br>
+C    <input type="radio" name="q6" value="c"> 2018<br>
+D    <input type="radio" name="q6" value="d"> 2005<br>
+</div>
+<br>
+<div class="question" id="question7">
+    <p>What is the primary goal of the Inner Harbor Water Wheel?</p>
+<div id="q7-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q7" value="a"> Generate electricity<br>
+B    <input type="radio" name="q7" value="b"> Remove litter from the water<br>
+C    <input type="radio" name="q7" value="c"> Promote tourism<br>
+D    <input type="radio" name="q7" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question8">
+    <p>What initiative encourages citizens to adopt a drain to keep it clean?</p>
+<div id="q8-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q8" value="a"> Adopt-A-Drain<br>
+B    <input type="radio" name="q8" value="b"> Drain Guardians<br>
+C    <input type="radio" name="q8" value="c"> Clean Drains, Clean Harbor<br>
+D    <input type="radio" name="q8" value="d"> Drain Defenders<br>
+</div>
+<br>
+<div class="question" id="question9">
+    <p>Which of the following organizations focuses on tree planting in Baltimore?</p>
+<div id="q9-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q9" value="a"> TreeBaltimore<br>
+B    <input type="radio" name="q9" value="b"> Clean Corps<br>
+C    <input type="radio" name="q9" value="c"> Civic Works<br>
+D    <input type="radio" name="q9" value="d"> Blue Water Baltimore<br>
+</div>
+<br>
+<div class="question" id="question10">
+    <p>What type of litter is most harmful to Baltimore’s marine ecosystem?</p>
+<div id="q10-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q10" value="a"> Glass<br>
+B    <input type="radio" name="q10" value="b"> Plastic<br>
+C    <input type="radio" name="q10" value="c"> Metal<br>
+D    <input type="radio" name="q10" value="d"> Paper<br>
+</div>
+<br>
+<div class="question" id="question11">
+    <p>Which Baltimore neighborhood has been particularly active in anti-litter campaigns?</p>
+<div id="q11-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q11" value="a"> Canton<br>
+B    <input type="radio" name="q11" value="b"> Fells Point<br>
+C    <input type="radio" name="q11" value="c"> Hampden<br>
+D    <input type="radio" name="q11" value="d"> Federal Hill<br>
+</div>
+<br>
+<div class="question" id="question12">
+    <p>How does the city enforce the distribution of community trash cans?</p>
+<div id="q12-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q12" value="a"> By request only<br>
+B    <input type="radio" name="q12" value="b"> Based on population density<br>
+C    <input type="radio" name="q12" value="c"> Proximity to commercial areas<br>
+D    <input type="radio" name="q12" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question13">
+    <p>What is the primary aim of the “Clean Corps Baltimore” initiative?</p>
+<div id="q13-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q13" value="a"> Recycle waste materials<br>
+B    <input type="radio" name="q13" value="b"> Advocate for clean energy<br>
+C    <input type="radio" name="q13" value="c"> Encourage volunteer cleaning<br>
+D    <input type="radio" name="q13" value="d"> Reduce industrial pollution<br>
+</div>
+<br>
+<div class="question" id="question14">
+    <p>What is a common criticism of Baltimore’s waste incinerators?</p>
+<div id="q14-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q14" value="a"> Inefficiency<br>
+B    <input type="radio" name="q14" value="b"> Air Pollution<br>
+C    <input type="radio" name="q14" value="c"> High Cost<br>
+D    <input type="radio" name="q14" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question15">
+    <p>What is the main focus of the “Less Waste, Better Baltimore” plan?</p>
+<div id="q15-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q15" value="a"> Reducing plastic use<br>
+B    <input type="radio" name="q15" value="b"> Increasing composting<br>
+C    <input type="radio" name="q15" value="c"> Overall waste reduction<br>
+D    <input type="radio" name="q15" value="d"> Encouraging recycling<br>
+</div>
+<br>
+<div class="question" id="question16">
+    <p>What does the phrase “zero waste” mean in the context of Baltimore’s future plans?</p>
+<div id="q16-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q16" value="a"> No landfill usage<br>
+B    <input type="radio" name="q16" value="b"> Complete recycling<br>
+C    <input type="radio" name="q16" value="c"> Minimal waste production<br>
+D    <input type="radio" name="q16" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question17">
+    <p>What is the Baltimore Waterfront Partnership’s role in litter management?</p>
+<div id="q17-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q17" value="a"> Direct cleanup<br>
+B    <input type="radio" name="q17" value="b"> Advocacy<br>
+C    <input type="radio" name="q17" value="c"> Community engagement<br>
+D    <input type="radio" name="q17" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question18">
+    <p>How is the Charm City supposed to reach its "zero waste" goals?</p>
+<div id="q18-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q18" value="a"> By 2020<br>
+B    <input type="radio" name="q18" value="b"> By 2025<br>
+C    <input type="radio" name="q18" value="c"> By 2030<br>
+D    <input type="radio" name="q18" value="d"> By 2040<br>
+</div>
+<br>
+<div class="question" id="question19">
+    <p>What is the focus of Baltimore's DPW's Bureau of Solid Waste?</p>
+<div id="q19-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q19" value="a"> Recycling only<br>
+B    <input type="radio" name="q19" value="b"> Trash collection only<br>
+C    <input type="radio" name="q19" value="c"> Street cleaning only<br>
+D    <input type="radio" name="q19" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question20">
+    <p>Which of the following activities is illegal under Baltimore's litter laws?</p>
+<div id="q20-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q20" value="a"> Leaf burning<br>
+B    <input type="radio" name="q20" value="b"> Spitting<br>
+C    <input type="radio" name="q20" value="c"> Unsecured truck loads<br>
+D    <input type="radio" name="q20" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question21">
+    <p>What is the “Care-A-Lot” Program?</p>
+<div id="q21-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q21" value="a"> An adopt-a-road program<br>
+B    <input type="radio" name="q21" value="b"> A community garden initiative<br>
+C    <input type="radio" name="q21" value="c"> An adopt-a-park program<br>
+D    <input type="radio" name="q21" value="d"> A vacant lot adoption program<br>
+</div>
+<br>
+<div class="question" id="question22">
+    <p>What is the significance of the Masonville Cove Environmental Education Center?</p>
+<div id="q22-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q22" value="a"> It's a waste management facility<br>
+B    <input type="radio" name="q22" value="b"> It's a water treatment plant<br>
+C    <input type="radio" name="q22" value="c"> It's an educational center focusing on environmental stewardship<br>
+D    <input type="radio" name="q22" value="d"> It's a bird sanctuary<br>
+</div>
+<br>
+<div class="question" id="question23">
+    <p>What is Project Clean Stream?</p>
+<div id="q23-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q23" value="a"> A government-run waste management program<br>
+B    <input type="radio" name="q23" value="b"> A community service requirement for Baltimore high school students<br>
+C    <input type="radio" name="q23" value="c"> An annual volunteer event for waterway and watershed cleanup<br>
+D    <input type="radio" name="q23" value="d"> A recycling initiative<br>
+</div>
+<br>
+<div class="question" id="question24">
+    <p>How many pounds of trash did Mr. Trash Wheel collect in its first five years?</p>
+<div id="q24-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q24" value="a"> Less than 1 million pounds<br>
+B    <input type="radio" name="q24" value="b"> Between 1 million and 2 million pounds<br>
+C    <input type="radio" name="q24" value="c"> Between 2 million and 3 million pounds<br>
+D    <input type="radio" name="q24" value="d"> Over 3 million pounds<br>
+</div>
+<br>
+<div class="question" id="question25">
+    <p>What type of waste is specifically targeted by Baltimore’s Street Sweeping Program?</p>
+<div id="q25-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q25" value="a"> Hazardous waste<br>
+B    <input type="radio" name="q25" value="b"> Yard waste<br>
+C    <input type="radio" name="q25" value="c"> Industrial waste<br>
+D    <input type="radio" name="q25" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question26">
+    <p>What does "Nip the Tap" aim to address?</p>
+<div id="q26-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q26" value="a"> Water pollution<br>
+B    <input type="radio" name="q26" value="b"> Air pollution<br>
+C    <input type="radio" name="q26" value="c"> Noise pollution<br>
+D    <input type="radio" name="q26" value="d"> Light pollution<br>
+</div>
+<br>
+<div class="question" id="question27">
+    <p>What type of items are collected by the E-Waste collection program?</p>
+<div id="q27-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q27" value="a"> Hazardous waste<br>
+B    <input type="radio" name="q27" value="b"> Organic waste<br>
+C    <input type="radio" name="q27" value="c"> Electronic waste<br>
+D    <input type="radio" name="q27" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question28">
+    <p>How does Baltimore manage hazardous waste?</p>
+<div id="q28-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q28" value="a"> Curbside collection<br>
+B    <input type="radio" name="q28" value="b"> Drop-off centers<br>
+C    <input type="radio" name="q28" value="c"> Special collection events<br>
+D    <input type="radio" name="q28" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question29">
+    <p>What role does the Inner Harbor play in Baltimore’s litter situation?</p>
+<div id="q29-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q29" value="a"> Source of litter<br>
+B    <input type="radio" name="q29" value="b"> Litter hotspot<br>
+C    <input type="radio" name="q29" value="c"> Litter reduction model<br>
+D    <input type="radio" name="q29" value="d"> None of the above<br>
+</div>
+<br>
+<div class="question" id="question30">
+    <p>What is the main aim of the “Baltimore Green Network”?</p>
+<div id="q30-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q30" value="a"> Promote renewable energy<br>
+B    <input type="radio" name="q30" value="b"> Plant more trees<br>
+C    <input type="radio" name="q30" value="c"> Turn vacant lots into green spaces<br>
+D    <input type="radio" name="q30" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question31">
+    <p>What are 'Middens' in the context of Baltimore's litter history?</p>
+<div id="q31-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q31" value="a"> Landfills<br>
+B    <input type="radio" name="q31" value="b"> Historic dumpsites<br>
+C    <input type="radio" name="q31" value="c"> Sewage treatment plants<br>
+D    <input type="radio" name="q31" value="d"> Composting centers<br>
+</div>
+<br>
+<div class="question" id="question32">
+    <p>Which of the following is a feature of Baltimore’s 'smart' trash cans?</p>
+<div id="q32-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q32" value="a"> Wi-Fi hotspots<br>
+B    <input type="radio" name="q32" value="b"> Solar compaction<br>
+C    <input type="radio" name="q32" value="c"> Public art<br>
+D    <input type="radio" name="q32" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question33">
+    <p>What is the focus of the Trash Free Maryland organization?</p>
+<div id="q33-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q33" value="a"> River Cleanup<br>
+B    <input type="radio" name="q33" value="b"> Legislative Advocacy<br>
+C    <input type="radio" name="q33" value="c"> Community Engagement<br>
+D    <input type="radio" name="q33" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question34">
+    <p>What was the main purpose of the Clean Drain Campaign of 2018?</p>
+<div id="q34-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q34" value="a"> Raise awareness about litter<br>
+B    <input type="radio" name="q34" value="b"> Encourage drain adoption<br>
+C    <input type="radio" name="q34" value="c"> Reduce water pollution<br>
+D    <input type="radio" name="q34" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question35">
+    <p>Which type of litter is most commonly picked up during community clean-up events?</p>
+<div id="q35-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q35" value="a"> Cigarette butts<br>
+B    <input type="radio" name="q35" value="b"> Plastic bags<br>
+C    <input type="radio" name="q35" value="c"> Beverage containers<br>
+D    <input type="radio" name="q35" value="d"> Food wrappers<br>
+</div>
+<br>
+<div class="question" id="question36">
+    <p>What is the maximum fine for illegal dumping in Baltimore?</p>
+<div id="q36-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q36" value="a"> $50<br>
+B    <input type="radio" name="q36" value="b"> $500<br>
+C    <input type="radio" name="q36" value="c"> $1000<br>
+D    <input type="radio" name="q36" value="d"> $5000<br>
+</div>
+<br>
+<div class="question" id="question37">
+    <p>What is the main goal of the Zero Waste Plan of 2019?</p>
+<div id="q37-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q37" value="a"> Eliminate the use of landfills and incinerators<br>
+B    <input type="radio" name="q37" value="b"> Achieve a 90% reduction in waste by 2040<br>
+C    <input type="radio" name="q37" value="c"> Completely recycle all plastic waste by 2030<br>
+D    <input type="radio" name="q37" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question38">
+    <p>What do Community Dumpster Days aim to collect?</p>
+<div id="q38-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q38" value="a"> E-waste<br>
+B    <input type="radio" name="q38" value="b"> Household waste<br>
+C    <input type="radio" name="q38" value="c"> Hazardous waste<br>
+D    <input type="radio" name="q38" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question39">
+    <p>What is the main focus of Baltimore's Office of Sustainability?</p>
+<div id="q39-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q39" value="a"> Energy Efficiency<br>
+B    <input type="radio" name="q39" value="b"> Waste Management<br>
+C    <input type="radio" name="q39" value="c"> Urban Planning<br>
+D    <input type="radio" name="q39" value="d"> All of the above<br>
+</div>
+<br>
+<div class="question" id="question40">
+    <p>What incentive does the city offer for reporting illegal dumping?</p>
+<div id="q40-feedback" class="feedback" color="red"></div>A    <input type="radio" name="q40" value="a"> A reward<br>
+B    <input type="radio" name="q40" value="b"> Community service hours<br>
+C    <input type="radio" name="q40" value="c"> Tax incentives<br>
+D    <input type="radio" name="q40" value="d"> None of the above<br>
+</div>
+<br>
+
+ </form>
+
+
+    <div>
+        <div id="feedback"></div>
+        <br>
+
+        <br>
+        <div id="evaluate">
+            <!-- <button onclick="evaluateQuiz()">Submit Quiz</button> -->
+            <button type="submit" onclick="evaluateQuiz()" class="btn btn-primary">Submit Answers</button>
+            <div id="score"></div>
+        </div>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelector('button').addEventListener('click', function () {
+                    const formData = new FormData(document.querySelector('form'));
+                    const userAnswers = Object.fromEntries(formData);
+                    evaluateQuiz(userAnswers);
+                });
+            });
+
+
+
+
+
+            function evaluateQuiz(userAnswers) {
+const correctAnswers = {
+    "q1": "a",
+    "q2": "a",
+    "q3": "c",
+    "q4": "d",
+    "q5": "a",
+    "q6": "b",
+    "q7": "b",
+    "q8": "a",
+    "q9": "a",
+    "q10": "b",
+    "q11": "c",
+    "q12": "d",
+    "q13": "c",
+    "q14": "b",
+    "q15": "c",
+    "q16": "d",
+    "q17": "d",
+    "q18": "d",
+    "q19": "d",
+    "q20": "d",
+    "q21": "d",
+    "q22": "c",
+    "q23": "c",
+    "q24": "d",
+    "q25": "b",
+    "q26": "a",
+    "q27": "c",
+    "q28": "c",
+    "q29": "b",
+    "q30": "c",
+    "q31": "b",
+    "q32": "b",
+    "q33": "d",
+    "q34": "d",
+    "q35": "a",
+    "q36": "d",
+    "q37": "a",
+    "q38": "d",
+    "q39": "d",
+    "q40": "a"
+};
+const context = {
+    "q1": "The Department of Public Works is the primary agency responsible for waste management in Baltimore.",
+    "q2": "Plastic is the most commonly found material in litter in Baltimore.",
+    "q3": "Mr. Trash Wheel and Professor Trash Wheel are river cleanup machines installed in Baltimore's waterways.",
+    "q4": "Mandatory composting is not one of the methods currently employed by Baltimore for litter reduction.",
+    "q5": "Blue Water Baltimore focuses primarily on improving water quality in Baltimore's rivers, streams, and Harbor.",
+    "q6": "The Baltimore Clean Harbor Plan was initiated in 2014 with the goal of making the harbor safe for swimming and fishing.",
+    "q7": "The primary goal of the Inner Harbor Water Wheel, also known as Mr. Trash Wheel, is to remove litter from the water.",
+    "q8": "The Adopt-A-Drain program encourages Baltimore citizens to adopt a drain to keep it clean and reduce litter and pollutants entering the harbor.",
+    "q9": "TreeBaltimore focuses on increasing the city's tree canopy, which indirectly reduces litter by stabilizing soil and improving water quality.",
+    "q10": "Plastic is the most harmful type of litter to Baltimore’s marine ecosystem as it does not biodegrade and can be ingested by wildlife.",
+    "q11": "Hampden has been particularly active in anti-litter campaigns, including community clean-up events.",
+    "q12": "The city of Baltimore uses a combination of request, population density, and proximity to commercial areas to determine the distribution of community trash cans.",
+    "q13": "The primary aim of “Clean Corps Baltimore” is to encourage volunteer cleaning and foster cleaner neighborhoods.",
+    "q14": "A common criticism of Baltimore’s waste incinerators is that they contribute to air pollution.",
+    "q15": "The main focus of the “Less Waste, Better Baltimore” plan is to reduce overall waste through a variety of means, including recycling and composting.",
+    "q16": "In Baltimore’s future plans, “zero waste” refers to a combination of no landfill usage, complete recycling, and minimal waste production.",
+    "q17": "The Baltimore Waterfront Partnership is involved in direct cleanup efforts, advocacy, and community engagement to manage litter.",
+    "q18": "Baltimore aims to reach its \"zero waste\" goals by 2040.",
+    "q19": "The Bureau of Solid Waste handles recycling, trash collection, and street cleaning.",
+    "q20": "All of the above activities are illegal under Baltimore's litter laws and can lead to fines or penalties.",
+    "q21": "The “Care-A-Lot” Program is designed to allow citizens to adopt vacant lots and transform them into community spaces.",
+    "q22": "The Masonville Cove Environmental Education Center serves as an educational center that focuses on environmental stewardship, including waste management and litter reduction.",
+    "q23": "Project Clean Stream is an annual volunteer event that focuses on the cleanup of Baltimore's waterways and watersheds.",
+    "q24": "Mr. Trash Wheel collected over 3 million pounds of trash from Baltimore's Inner Harbor in its first five years of operation.",
+    "q25": "Baltimore’s Street Sweeping Program specifically targets yard waste like leaves and grass clippings.",
+    "q26": "\"Nip the Tap\" is an initiative that aims to address water pollution by reducing the use of plastic water bottles.",
+    "q27": "The E-Waste collection program specifically focuses on the collection of electronic waste.",
+    "q28": "Baltimore manages hazardous waste through special collection events where residents can safely dispose of items.",
+    "q29": "The Inner Harbor is a litter hotspot, collecting waste from various parts of the city.",
+    "q30": "The main aim of the “Baltimore Green Network” is to turn vacant lots into green spaces, indirectly contributing to litter reduction.",
+    "q31": "Middens refer to historic dumpsites that have been excavated for archaeological research on waste management in Baltimore's past.",
+    "q32": "Some of Baltimore's 'smart' trash cans feature solar compaction to hold more waste and reduce the frequency of collections.",
+    "q33": "Trash Free Maryland focuses on river cleanup, legislative advocacy, and community engagement to combat litter and improve waste management.",
+    "q34": "The Clean Drain Campaign of 2018 aimed to raise awareness about litter, encourage drain adoption, and reduce water pollution.",
+    "q35": "Cigarette butts are the most commonly picked up items during community clean-up events.",
+    "q36": "The maximum fine for illegal dumping in Baltimore is $5000.",
+    "q37": "The main goal of Baltimore's Zero Waste Plan of 2019 is to eliminate the use of landfills and incinerators.",
+    "q38": "Community Dumpster Days aim to collect E-waste, household waste, and hazardous waste from community members.",
+    "q39": "Baltimore's Office of Sustainability focuses on energy efficiency, waste management, and urban planning to create a more sustainable city.",
+    "q40": "The city of Baltimore offers a reward for reporting illegal dumping."
+};
+    let score = 0;
+                const totalQuestions = Object.keys(correctAnswers).length;
+
+                for (let q in correctAnswers) {
+                    const feedbackContainer = document.getElementById(`${q}-feedback`);
+
+                    // Clear previous feedback if exists
+                    feedbackContainer.innerHTML = "";
+
+                    if (userAnswers[q] === correctAnswers[q]) {
+                        score++;
+                    } else {
+                        const feedback = document.createElement("p");
+                        feedback.style.color = "red";
+                        feedback.innerText = `The correct answer is ${correctAnswers[q]}. Reason: ${context[q]}`;
+                        feedbackContainer.appendChild(feedback);
+                    }
+                }
+
+                document.getElementById("score").innerText = `Your score is ${score} out of ${totalQuestions}`;
+                document.getElementById("submit").click.disabled = true;
+
+                return score;
+            }
+
+
+
+        </script>
+</body>
+
+</html>
